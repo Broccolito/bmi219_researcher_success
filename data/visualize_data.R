@@ -44,4 +44,4 @@ plt4 = ggplot(data = d, aes(y = citation_number, x = h_index)) +
 
 plt = grid.arrange(plt1, plt4, plt2, plt3)
 
-ggsave(filename = "analysis_result.png", plot = plt, dpi = 1200, width = 8, height = 5)
+ggsave(filename = "analysis_result.png", plot = plt, dpi = 1200, width = 10, height = 5)
