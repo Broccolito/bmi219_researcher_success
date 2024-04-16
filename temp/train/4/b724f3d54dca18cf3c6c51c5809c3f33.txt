@@ -1,0 +1,1 @@
+Data re-uploading for a universal quantum classifier; Encoding-dependent generalization bounds for parametrized quantum circuits; Training quantum embedding kernels on near-term quantum computers; Exploiting symmetry in variational quantum machine learning; Understanding quantum machine learning also requires rethinking generalization
