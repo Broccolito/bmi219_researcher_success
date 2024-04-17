@@ -1,1 +1,0 @@
-A stochastic version of Stein variational gradient descent for efficient sampling; Existence and rigidity of the vectorial Peierls–Nabarro model for dislocations in high dimensions; Convergence of Oja's online principal component flow; On Runge-Kutta methods for the water wave equation and its simplified nonlocal hyperbolic model

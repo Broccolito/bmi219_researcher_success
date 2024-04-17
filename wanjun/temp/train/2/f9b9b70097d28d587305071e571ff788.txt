@@ -1,0 +1,1 @@
+Automatic mutual information noise omission (AMINO): generating order parameters for molecular systems; Discovering protein conformational flexibility through artificial-intelligence-aided molecular dynamics; Phase Transitions in Nano-confined Water
