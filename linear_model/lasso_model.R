@@ -30,3 +30,32 @@ predictions = h2o.predict(lasso_model, valid)
 
 # Print predictions
 print(predictions)
+
+
+plot_data = data.frame(
+  prediction = as.vector(predictions),
+  observation = as.vector(valid[,2])
+)
+
+plt = ggplot(data = plot_data, aes(x = observation, y = prediction)) + 
+  geom_point(fill = "gray", color = "black", shape = 21, size = 2) + 
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed") +
+  geom_smooth(formula = y~x, method = "lm", color = "black") + 
+  xlab("Observed H-index since 2018") + 
+  ylab("Predicted H-index since 2018") + 
+  ggtitle(label = "Lasso Model Prediction") + 
+  theme_pubr() + 
+  theme(element_text(size = 20))
+plt
+
+ggsave(filename = "lasso_performance.png", plot = plt, dpi = 1200,
+       width = 5, height = 5)
+
+save(lasso_model, file = "lasso_model.rda")
+
+relative_importance = data.frame(
+  variable = l$variable,
+  importance = l$relative_importance
+)
+
+fwrite(relative_importance, file = "relative_importance.csv")
